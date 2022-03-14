@@ -242,15 +242,11 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 
 
-.backgroundImage {
-	padding-top: 3%;
-	padding-bottom: 97%;
-	background-image: url('https://jimbob-git.github.io/james_quiz/map1.jpeg');
-	background-size: cover;
-	background-repeat: no-repeat;
+<style>
+p {
+  background-image: url('map1.jpeg');
 }
-
-<div id="backgroundImage"></div>
+</style>
 	
 
 
