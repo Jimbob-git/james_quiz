@@ -43,6 +43,12 @@
 <img src="https://jimbob-git/github.io/james_quiz/map1.jpeg" alt="World" style="width:100%">
 <p style="background-image: url('https://jimbob-git.github.io/james_quiz/map1.jpeg');"> 
 
+<style>
+{
+  background-image: url('map1.jpeg');
+}
+</style>
+
 <div class="w3-container">
 <a href="#" class="home">Home</a>
 <a href="#" class="next">Next Page &raquo;</a>
