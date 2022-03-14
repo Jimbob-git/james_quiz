@@ -242,27 +242,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 
 
-<style>
-p {
-  background-image: url('map1.jpeg');
-}
-</style>
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .button {
   padding: 15px 30px;
   font-size: 29px;
