@@ -3,7 +3,10 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="new.css">
-<body>
+<style>
+<body {
+  background-image: url('map1.jpeg');
+}
 
 
 <!-- Username -->
@@ -43,11 +46,6 @@
 <img src="https://jimbob-git/github.io/james_quiz/map1.jpeg" alt="World" style="width:100%">
 <p style="background-image: url('https://jimbob-git.github.io/james_quiz/map1.jpeg');"> 
 
-<style>
-{
-  background-image: url('map1.jpeg');
-}
-</style>
 
 <div class="w3-container">
 <a href="#" class="home">Home</a>
@@ -62,6 +60,6 @@
 </div>
 <p><a href="Mapdata.js>Destinations</a></p>
 
-      
+</style>   
 </body>     
 </html>
