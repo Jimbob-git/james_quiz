@@ -3,10 +3,7 @@
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="new.css">
-<style>
-<body {
-  background-image: url('https://jimbob-git.github.io/james_quiz/map1.jpeg');
-}
+<body>
 
 
 <!-- Username -->
@@ -60,6 +57,5 @@
 </div>
 <p><a href="Mapdata.js>Destinations</a></p>
 
-</style>   
 </body>     
 </html>
