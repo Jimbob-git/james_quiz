@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="new.css">
 <body>
 
+<p style="background-image: url('https://jimbob-git.github.io/james_quiz/map1.jpeg');"> 
 
 <!-- Username -->
 
@@ -41,7 +42,7 @@
 </div>
 
 <img src="https://jimbob-git/github.io/james_quiz/map1.jpeg" alt="World" style="width:100%">
-<p style="background-image: url('https://jimbob-git.github.io/james_quiz/map1.jpeg');"> 
+
 
 
 <div class="w3-container">
