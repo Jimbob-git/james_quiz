@@ -15,6 +15,7 @@
 <button class="button">Leaderboard</button>
 
 <!-- Sidebar -->
+
 <div class="w3-sidebar w3-blue w3-bar-block" style="width:15%">
   <h2 class="w3-bar-item">Destination Questions</h2>
   <a href="#" class="w3-bar-item w3-button">Edinburgh</a>
