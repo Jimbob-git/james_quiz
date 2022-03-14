@@ -1,0 +1,17 @@
+.option:hover{
+    background-color: FFFF00;
+}
+.start,.leaderboard{
+    width:20vw;
+    height: 10vh;
+    padding: 10px;
+    font-size: larger;
+}
+.start{
+    
+    background-color: #00FF00;
+}
+.leaderboard{
+    color: white;
+    background-color: #4169E1;
+}
