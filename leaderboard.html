@@ -1,86 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-} 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 200%;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr:nth-child(even) {
-  background-color: #6495ED;
-}
-
-</style>
-
-</head>
 <body>
 
-<h1>Leaderboard</h1>
-<p><h3>If your username is displayed on the Leaderboard, You've done great! Well done!:</h3></p>
+    <ul id="container"></ul>
 
-<table>
-  <tr>
-    <th><h3>Username</h3></th>
-    <th><h3>Points</h3></th>
-  </tr>
-  <tr>
-    <td>Simon</td>
-    <td>130</td>
-  </tr>
-  <tr>
-    <td>Jyoti</td>
-    <td>120</td>
-  </tr>
-  <tr>
-    <td>James</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Bill</td>
-    <td>130</td>
-  </tr>
-  <tr>
-    <td>Gordon</td>
-    <td>120</td>
-  </tr>
-  <tr>
-    <td>Petra</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Isam</td>
-    <td>130</td>
-  </tr>
-  <tr>
-    <td>Handy Andy</td>
-    <td>120</td>
-  </tr>
-  <tr>
-    <td>crypto_bob</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>Alice</td>
-    <td>100</td>
-  </tr>
-</table>
+    <script>
 
-<div>
-	<p><link href="new.css" rel="stylesheet" type="text/css" media="screen"></p>
-</div>
-<a href="quiz_question13.html" class="back">previous page</a>
-<a href="home_page.html" class="home">Home</a>
+        leaderboard();
+
+        function leaderboard() {
+
+            const container = document.getElementById("container");
+
+            var players = [
+                { name: "Thomas", date: "01/23/18", score: 201 },
+                { name: "Michael", date: "03/24/17", score: 943 },
+                { name: "Lisa", date: "06/04/18", score: 79 }
+            ]
+
+            const playersSorted = players.sort(function (a, b) {
+                if ( Number(a.score) < Number(b.score) ) return -1;
+                if ( Number(a.score) > Number(b.score) ) return 1;
+                return 0;
+            });
+
+            // Output the players in list items
+            for (p in playersSorted) {
+                player = playersSorted[p];
+
+                var node = document.createElement("li");                 // Create a <li> node
+                var textnode = document.createTextNode(`Name: ${player.name} Date: ${player.date} Score: ${player.score}`);         // Create a text node
+                node.appendChild(textnode);                              // Append the text to <li>
+                container.appendChild(node);
+            }
+
+        }
+
+    </script>
+
+
 </body>
 </html>
