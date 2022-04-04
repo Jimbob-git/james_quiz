@@ -219,9 +219,9 @@
     background-repeat: no-repeat;
     width: 200px;
     height: 70px;
-    -webkit-animation: movingplane 30s linear infinite;
-  -moz-animation: movingplane 30s linear infinite;
-    -o-animation: movingplane 30s linear infinite;
+    -webkit-animation: movingplane 10s linear infinite;
+  -moz-animation: movingplane 10s linear infinite;
+    -o-animation: movingplane 10s linear infinite;
 }
 @keyframes movingclouds {
   0% {margin-left: 100%;}
