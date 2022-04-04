@@ -223,6 +223,18 @@
   -moz-animation: movingplane 10s linear infinite;
     -o-animation: movingplane 10s linear infinite;
 }
+
+#aeroplane2{
+    position: absolute;
+    background-image: url('https://www.dl.dropboxusercontent.com/s/5beukq1zg37jlr7/airbus.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 70px;
+    -webkit-animation: movingplane 30s linear infinite;
+  -moz-animation: movingplane 30s linear infinite;
+    -o-animation: movingplane 30s linear infinite;
+}
+
 @keyframes movingclouds {
   0% {margin-left: 100%;}
   100% {margin-left: -150%;}
