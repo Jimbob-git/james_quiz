@@ -341,15 +341,18 @@
 
 .previous{
 	background-color: red;
+	color: white;
 }
 
 .home{    
     background-color: blue;
+	color: white;
 }
 .next{
-    color: white;
     background-color: #04AA6D;
+	color: white;
 }
+
 </style>
 </body>
 </html>
