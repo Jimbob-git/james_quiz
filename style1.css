@@ -3,10 +3,12 @@
 <body>
 <style>
 
-div { 
-    display:block; 
-    float:left; 
-} 
+.div1, div2{
+
+display: inline-block;
+
+}
+
 
 .body{
     padding: 0;
