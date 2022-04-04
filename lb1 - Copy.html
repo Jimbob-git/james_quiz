@@ -1,0 +1,89 @@
+<?php
+  /**
+   * @package WordPress
+   * @subpackage LearnTelehealth.org Site Theme
+   *
+   * Template Name: Game Leaderboard
+   */
+  
+  // Set the Game Name (allows for multiple 'games' in the database)
+  $game = 'Hub & Spoke';
+  if (!empty($_GET)) {
+    
+    // Parse/Sanitize the submitted values
+    $name = urldecode(mysql_real_escape_string($_GET['username']));
+    $score = intval(mysql_real_escape_string($_GET['score']));
+    $gamesession = mysql_real_escape_string($_GET['session']);
+    
+    global $wpdb; global $user_ID;
+    
+    // Check if values are empty or not... if not, save score results.
+    if (!empty($game) && !empty($name) && !empty($score) && !empty($gamesession)) {
+        // Check if the user is logged in or not, if so, we can use their user_ID as a field to save to the database.
+        if (!is_user_logged_in()) {
+          // Insert the score data into the database using $wpdb (http://codex.wordpress.org/Class_Reference/wpdb)
+          $wpdb->insert('games_leaderboard', array( 'game' => $game, 'name' => $name, 'score' => $score, 'session' => $gamesession ), array('%s','%s','%d','%s'));
+          // Forward the User to the game page (prevents users from seeing $_GET variables)
+          header("Location: http://learntelehealth.org/games/hubandspoke/"); exit(0);
+        } else {
+          // Insert the score data into the database using $wpdb (http://codex.wordpress.org/Class_Reference/wpdb)
+          $wpdb->insert('games_leaderboard', array( 'game' => $game, 'name' => $name, 'score' => $score, 'user' => $user_ID, 'session' => $gamesession ), array('%s','%s','%d','%d','%s'));
+          // Forward the User to the game page (prevents users from seeing $_GET variables)
+          header("Location: http://learntelehealth.org/games/hubandspoke/"); exit(0);
+        }
+    }
+  }
+  
+  // Get Wordpress Header Template File
+  get_header(); 
+  
+?>
+
+<div role="main">
+  
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  
+  <article class="post" id="post-<?php the_ID(); ?>">
+    <header>
+      <h1 class="withsubtitle"><?php the_title(); ?></h1>
+      <h2 class="script gray">Game Leaderboard</h2>
+    </header>
+  
+    <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+    
+    <?php 
+      // Get the leaderboard results from the database
+      $leaderboard = $wpdb->get_results( "SELECT * FROM games_leaderboard WHERE game = '$game' ORDER BY score DESC"); 
+    ?>
+    <table class="tablesorter" style="border:1px solid #bfbfbf;">
+      <thead style="background:#f7f7f7;">
+        <tr>
+          <td>Name</td>
+          <td>Score</td>
+        </tr>
+      </thead>
+      <tbody style="background:#ffffff;border:1px solid #bfbfbf;">
+        <?php 
+          // Loop through results, creating table rows from the results...
+          foreach ($leaderboard as $result) { ?>
+          <tr style="border-bottom:1px solid #cccccc;">
+            <td><?php echo ucwords(urldecode($result->name)); ?></td>
+            <td><?php echo intval($result->score); ?></td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  
+  </article>
+  
+  <?php endwhile; endif; ?>
+  
+  <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+  
+</div>
+
+
+<?php 
+  // Get Wordpress Footer Template File
+  get_footer(); 
+?>
