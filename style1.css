@@ -3,10 +3,16 @@
 <body>
 <style>
 
-#wrapper{
- text-align:center;
-}
-
+/* h6: set presentation of images */
+h6
+  {
+  font-family: "Franklin Gothic Demi", serif;
+  font-size: 1.0em;
+  font-weight: normal;
+  line-height: 1.25em;
+  text-align: center;
+  }
+  
 .body{
     padding: 0;
     margin: 0;    
