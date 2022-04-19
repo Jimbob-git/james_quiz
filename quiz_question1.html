@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style1.css">   
 	<p>Page 1 of the Quiz</p>
 	<h1>James' Round the World Quiz</h1>
-	<script type=”text/javascript” src=”quiz_config.js”></script>
-	<script type=”text/javascript” src=”quiz_functions.js”></script>
 </head> 
 <body>
 
@@ -22,20 +20,48 @@
 		Q1. What is the name of the Queen's official Edinburgh residence?
     </div>
     <div class="option-container">
-		<button class="option" onclick="" id="op1" >Holyrood Castle</button>
+		<button class="option" value="0" id="var_op1" >Holyrood Castle</button>
       
-        <button class="option" id="op2" >Holyrood House</button>
+        <button class="option" value="0" id="var_op2" >Holyrood House</button>
       
-        <button class="option" id="op3">Edinburgh Castle</button>
+        <button class="option" value="0" id="var_op3">Edinburgh Castle</button>
       
-        <button class="option" id="op4">Holyrood Palace</button>
-		<script src="quiz_functions.js"></script>
-    </div>
+        <button class="option" value="25" id="var_op4">Holyrood Palace</button>
+	</div>
+		
 	
-<script type=”text/javascript”>
-<!–
-  renderQuiz();
-//–>
+	<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+
+
+	   result = variable + sub + con + ifstate;
+
+	document.getElementById("grade").innerHTML = result;
+
+ grading = [
+	   {score:0,feedback:"I don't think you studied", image: "none.jpg"},
+	   {score:25,feedback:"You need to spend more time. Try again", image: "poor.jpg"},
+	   {score:50,feedback:"I think you could do better. Try again.", image: "avg.jpg"},
+	   {score:75,feedback:"So close. Try again.", image: "above.jpg"},
+	   {score:100,feedback:"Excellent! You're a JavaScript pro!", image: "excellent.jpg"}
+	   ];
+
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+	  }
+	  }
+
+
+document.getElementById("grade2").innerHTML = result2;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
 </script>
 
 	
