@@ -10,12 +10,15 @@
  <header><h2><b>JIMBOB'S ROUND THE WORLD QUIZ</b></h2></header>
  <main>
  <!-- Username -->
+ 
 <form action="quiz_question1.html" method="post">
   <div class="imgcontainer">
   </div>
   <div class="container">
     <label for="uname"></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Username then click submit" id="user" name="uname" required>
+	<input type="button" onclick="createCookie()" value="submit">
+	
     </label>
 	<a href="quiz_question1.html"><button class="button">Start Main Quiz</button></a>
 	<a href="leaderboard.html"><button class="button">Leaderboard</button></a>

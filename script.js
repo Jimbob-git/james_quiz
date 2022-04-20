@@ -1,3 +1,28 @@
+function createCookie(name,pwds){
+  let username = document.getElementById("user");
+  let pwd = document.getElementById("pd");
+
+
+  today = new Date();
+  var expire = new Date();
+  expire.setTime(today.getTime() + 3600000*24*15);
+ 
+
+  document.cookie = "name="+username.value+";path=/" + ";expires="+expire.toUTCString();
+  //can only write one entity at a time (name, pass)
+}  
+
+
+//event handler for page load - runs on every refresh
+window.onload = function(){
+	
+	var uname = 'Route66';
+	document.getElementById('user').value = uname;
+
+
+
+
+
 // Questions will be asked
 const Questions = [{
         id: 0,
