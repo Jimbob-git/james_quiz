@@ -15,8 +15,12 @@
 <img src="holyrood.jpg" alt="holyrood" width="600" height="450">
 </div>
 
+<div class="panel">
+<div class="result">
+</div>
 
-	<div class="question-container" id="question">
+
+		<div class="question-container" id="question">
 		Q1. What is the name of the Queen's official Edinburgh residence?
     </div>
     <div class="option-container">
@@ -28,41 +32,8 @@
       
         <button class="option" value="25" id="var_op4">Holyrood Palace</button>
 	</div>
-		
 	
-	<script>
-document.getElementById("form1").onsubmit=function() {
-       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
-	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
-	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
-	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
-
-
-	   result = variable + sub + con + ifstate;
-
-	document.getElementById("grade").innerHTML = result;
-
- grading = [
-	   {score:0,feedback:"I don't think you studied", image: "none.jpg"},
-	   {score:25,feedback:"You need to spend more time. Try again", image: "poor.jpg"},
-	   {score:50,feedback:"I think you could do better. Try again.", image: "avg.jpg"},
-	   {score:75,feedback:"So close. Try again.", image: "above.jpg"},
-	   {score:100,feedback:"Excellent! You're a JavaScript pro!", image: "excellent.jpg"}
-	   ];
-
-for(i=0; i<grading.length; i++) {
-    if(result == grading[i].score) {
-    result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
-	  }
-	  }
-
-
-document.getElementById("grade2").innerHTML = result2;
-
-return false; // required to not refresh the page; just leave this here
-} //this ends the submit function
-
-</script>
+	
 
 	
 	
@@ -84,8 +55,10 @@ return false; // required to not refresh the page; just leave this here
 	</div>	
 	
 	<div class="navigation">
-		<a href="home_page.html" class="home">Home</a>
-		<a href="quiz_question2.html" class="next">Next Question &raquo;</a>
-	</div>	
+            <button class="evaluate">Evaluate</button>
+            <a href="home_page.html" class="home">Home</a>
+			<a href="quiz_question2.html" class="next">Next Question &raquo;</a>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
