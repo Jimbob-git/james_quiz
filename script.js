@@ -24,17 +24,20 @@ window.onload = function(){
 
 
 // Questions will be asked
-const Questions = [{
+
+const questions = [
+    
+    {
         id: 0,
-        q: "What is the name of the Queen's official Edinburgh residence?",
-        a: [{ text: "Holyrood Castle", isCorrect: false },
-            { text: "Holyrood House", isCorrect: false },
-            { text: "Edinburgh Castle", isCorrect: false },
-            { text: "Holyrood Palace", isCorrect: true }
+	q: "Q1. What is the name of the Queen's official Edinburgh residence?",
+        a: [{ text: "Holyrood House", isCorrect: false },
+            { text: "Holyrood Castle", isCorrect: false },
+            { text: "Holyrood Palace", isCorrect: true },
+            { text: "Edinburgh Castle", isCorrect: false }
         ]
   
-    },
-    {
+    },	
+	{
         id: 1,
         q: "Q2. London has six major airports, 5 of which are: Gatwick, Heathrow, Luton, Southend and Stanstead, name the sixth one?",
         a: [{ text: "London Palace", isCorrect: false },

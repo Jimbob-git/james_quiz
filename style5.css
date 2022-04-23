@@ -2,8 +2,7 @@ body{
     padding: 0;
     margin: 0;    
     width:100vw;
-    height: 100vh;
-	background-color: #ADD8E6;
+    height: 100vh;    
 }
 .panel{
     height: 100vh;
@@ -17,7 +16,7 @@ body{
     padding: 5px;
     width: 80vw;
     height: 10vh;
-    background-color: #04AA6D;
+    background-color: #c7dddf;
     font-size: x-large;
     text-align: center;
       
@@ -38,7 +37,7 @@ body{
     padding: 5px;
     width: 80vw;
     height: 20vh;
-    background-color: #ADD8E6;   
+    background-color: #9eb1b3;   
         
 }
 .option{    
@@ -46,7 +45,7 @@ body{
     width: 15vw;
     height: 10vh;
     font-size: larger;
-    background-color: #1E90FF;
+    background-color: lightskyblue;
     border-radius: 25%;
 }
 .option:hover{
@@ -59,29 +58,20 @@ body{
     padding: 5px;
     display: flex;
     justify-content: space-around;
-    background-color: #04AA6D;
+    background-color:#c7dddf;
 }
   
-.check{
-    width:20vw;
+.evaluate,.next{
+    width:30vw;
     height: 8vh;
     padding: 5px;
     font-size: larger;
+}
+.evaluate{
+    
     background-color: #50DBB4;
 }
-.home{
-	width:20vw;
-    height: 8vh;
-    padding: 5px;
-	text-align: center;
-    font-size: larger;
-	background-color: #1E90FF;
-}
 .next{
-	width:20vw;
-    height: 8vh;
-    padding: 5px;
-    font-size: larger;	
+    color: white;
     background-color: #BF3325;
 }
-

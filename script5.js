@@ -2,10 +2,31 @@
 const Questions = [{
         id: 0,
         q: "Which of these flags is the national flag of Scotland?",
+		
         a: [{ text: "A", isCorrect: false },
             { text: "B", isCorrect: false },
             { text: "C", isCorrect: true },
             { text: "D", isCorrect: false }
+        ]
+  
+    },
+    {
+        id: 1,
+        q: "What is the capital of Thailand?",
+        a: [{ text: "Lampang", isCorrect: false, isSelected: false },
+            { text: "phuket", isCorrect: false },
+            { text: "Ayutthaya", isCorrect: false },
+            { text: "Bangkok", isCorrect: true }
+        ]
+  
+    },
+    {
+        id: 2,
+        q: "What is the capital of Gujarat",
+        a: [{ text: "surat", isCorrect: false },
+            { text: "vadodara", isCorrect: false },
+            { text: "gandhinagar", isCorrect: true },
+            { text: "rajkot", isCorrect: false }
         ]
   
     }
@@ -86,11 +107,11 @@ function iterate(id) {
         selected = op4.value;
     })
   
-    // Grabbing the check answer button
-    const check = document.getElementsByClassName("Check Answer");
+    // Grabbing the evaluate button
+    const evaluate = document.getElementsByClassName("evaluate");
   
-    // check method
-    check[0].addEventListener("click", () => {
+    // Evaluate method
+    evaluate[0].addEventListener("click", () => {
         if (selected == "true") {
             result[0].innerHTML = "True";
             result[0].style.color = "green";
