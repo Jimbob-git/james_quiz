@@ -23,15 +23,6 @@ body{
       
 }
 
-.result{
-    margin: 10px;
-    padding: 5px;
-    width:80vw;
-    height: 10vh;
-    text-align: center;
-    font-size: 50px;
-      
-}
 .option-container{
     display: flex;
     justify-content: space-around; 
@@ -53,36 +44,42 @@ body{
 .option:hover{
     background-color: lightgoldenrodyellow;
 }
-.navigation{
-    width: 80vw;
-    height: 10vh;
-    margin: 10px;
-    padding: 5px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #04AA6D;
-}
+
   
-.check{
-    width:20vw;
-    height: 8vh;
-    padding: 5px;
-    font-size: larger;
-    background-color: #50DBB4;
-}
-.home{
-	width:20vw;
-    height: 8vh;
-    padding: 5px;
+.check_answer {
+	padding: 20px 60px;
+	font-size: 17px;
 	text-align: center;
-    font-size: larger;
-	background-color: #1E90FF;
+	cursor: pointer;
+	outline: none;
+	color:#000000;
+	background-color: #04AA6D;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 9px #999;
+	
 }
-.next{
-	width:20vw;
-    height: 8vh;
-    padding: 5px;
-    font-size: larger;	
-    background-color: #BF3325;
+.home {
+	padding: 20px 60px;
+	font-size: 17px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color:#000000;
+	background-color: #04AA6D;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 9px #999;
 }
+.button1 {
+	padding: 20px 60px;
+	font-size: 17px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color:#000000;
+	background-color: #04AA6D;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 9px #999;
 
