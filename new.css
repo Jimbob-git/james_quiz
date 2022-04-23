@@ -83,6 +83,20 @@ button:hover {
 	box-shadow: 0 9px #999;
 }
 
+.button2 {
+	padding: 10px 25px;
+	font-size: 17px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color:#000000;
+	background-color: #04AA6D;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 9px #999;
+}
+
+
 .button:hover {background-color: #3e8e41}
 
 .button:active {
