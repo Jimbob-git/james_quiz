@@ -2,8 +2,8 @@ body{
     padding: 0;
     margin: 0;    
     width:100vw;
-    height: 100vh;
-	background-color: #ADD8E6;
+    height: 100vh; 
+	background-color: #AFEEEE;
 }
 .panel{
     height: 100vh;
@@ -17,12 +17,20 @@ body{
     padding: 5px;
     width: 80vw;
     height: 10vh;
-    background-color: #04AA6D;
+    background-color: #20B2AA;
     font-size: x-large;
     text-align: center;
       
 }
-
+.result{
+    margin: 10px;
+    padding: 5px;
+    width:80vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 50px;
+      
+}
 .option-container{
     display: flex;
     justify-content: space-around; 
@@ -30,7 +38,7 @@ body{
     padding: 5px;
     width: 80vw;
     height: 20vh;
-    background-color: #ADD8E6;   
+    background-color: #AFEEEE;   
         
 }
 .option{    
@@ -38,13 +46,21 @@ body{
     width: 15vw;
     height: 10vh;
     font-size: larger;
-    background-color: #1E90FF;
+    background-color: #00BFFF;
     border-radius: 25%;
 }
 .option:hover{
     background-color: lightgoldenrodyellow;
 }
-
+.navigation{
+    width: 80vw;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#20B2AA;
+}
   
 .check_answer {
 	padding: 20px 60px;
@@ -52,8 +68,8 @@ body{
 	text-align: center;
 	cursor: pointer;
 	outline: none;
-	color:#000000;
-	background-color: #04AA6D;
+	color:white;
+	background-color: #00BFFF;
 	border: none;
 	border-radius: 10px;
 	box-shadow: 0 9px #999;
@@ -65,8 +81,8 @@ body{
 	text-align: center;
 	cursor: pointer;
 	outline: none;
-	color:#000000;
-	background-color: #04AA6D;
+	color:white;
+	background-color: #00BFFF;
 	border: none;
 	border-radius: 10px;
 	box-shadow: 0 9px #999;
@@ -77,9 +93,9 @@ body{
 	text-align: center;
 	cursor: pointer;
 	outline: none;
-	color:#000000;
-	background-color: #04AA6D;
+	color:white;
+	background-color: #00BFFF;
 	border: none;
 	border-radius: 10px;
 	box-shadow: 0 9px #999;
-
+}

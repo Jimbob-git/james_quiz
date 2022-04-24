@@ -1,8 +1,8 @@
 // Questions will be asked
-const Questions = [{
-        id: 0,
+var Questions = [{
+        
         q: "Which of these flags is the national flag of Scotland?",
-		
+		id: 0,
         a: [{ text: "A", isCorrect: false },
             { text: "B", isCorrect: false },
             { text: "C", isCorrect: true },
@@ -15,55 +15,15 @@ const Questions = [{
         q: "Which of these flags is the national flag of the United Kingdom?",
         a: [{ text: "A", isCorrect: false },
             { text: "B", isCorrect: false },
-            { text: "C", isCorrect: false },
-            { text: "D", isCorrect: true }
-        ]
-  
-    },
-    {
-        id: 2,
-        q: "Which of these flags is the national fla of India?",
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
             { text: "C", isCorrect: true },
             { text: "D", isCorrect: false }
         ]
   
     },
 	{
-        id: 3,
-        q: "Which of these flags is the national flag of singapore?",
-        a: [{ text: "A", isCorrect: true },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: false },
-            { text: "D", isCorrect: false }
-        ]
-  
-    },
-    {
-        id: 4,
-        q: "Which one of these flags is the national flag of Thailand?",
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: false },
-            { text: "D", isCorrect: true }
-        ]
-  
-    },
-	{
-        id: 5,
-        q: "Which one of these flags is the national flag of Australia?",
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: true },
-            { text: "D", isCorrect: false }
-        ]
-  
-    },
-    {
-        id: 8,
-        q: "Which of these flags is the national flag of New Zealand?",
-        a: [{ text: "A", isCorrect: true },
+		id: 2,
+		q: "Which one of these flags is the national flag of India?",
+		a: [{ text: "A", isCorrect: true },
             { text: "B", isCorrect: false },
             { text: "C", isCorrect: false },
             { text: "D", isCorrect: false }
@@ -71,8 +31,9 @@ const Questions = [{
   
     },
 	{
-        id: 9,
-        q: "Which of these flags is the national flag of Fiji?",
+		id: 3,
+        q: "Which of these flags is the national flag of Singapore?",
+		
         a: [{ text: "A", isCorrect: false },
             { text: "B", isCorrect: true },
             { text: "C", isCorrect: false },
@@ -80,9 +41,9 @@ const Questions = [{
         ]
   
     },
-    {
-        id: 10,
-        q: "Which of these flags is the national flag of the Cook Islands?",
+	{
+        id: 4,
+        q: "Which of these flags is the national flag of Thailand?",
         a: [{ text: "A", isCorrect: true },
             { text: "B", isCorrect: false },
             { text: "C", isCorrect: false },
@@ -91,12 +52,54 @@ const Questions = [{
   
     },
 	{
-        id: 11,
-        q: "Which of these flags is the national flag of the USA?",
-        a: [{ text: "A", isCorrect: false },
+		id: 5,
+		q: "Which one of these flags is the national flag of Australia?",
+		a: [{ text: "A", isCorrect: false },
+            { text: "B", isCorrect: true },
+            { text: "C", isCorrect: false },
+            { text: "D", isCorrect: false }
+        ]
+  
+    },
+	{
+		id: 6,
+        q: "Which of these flags is the national flag of New Zealand?",
+		
+        a: [{ text: "A", isCorrect: true },
             { text: "B", isCorrect: false },
             { text: "C", isCorrect: false },
-            { text: "D", isCorrect: true }
+            { text: "D", isCorrect: false }
+        ]
+  
+    },
+	{
+        id: 7,
+        q: "Which of these flags is the national flag of Fiji?",
+        a: [{ text: "A", isCorrect: false },
+            { text: "B", isCorrect: false },
+            { text: "C", isCorrect: true },
+            { text: "D", isCorrect: false }
+        ]
+  
+    },
+	{
+		id: 8,
+		q: "Which one of these flags is the national flag of the Cook Islands?",
+		a: [{ text: "A", isCorrect: false },
+            { text: "B", isCorrect: false },
+            { text: "C", isCorrect: true },
+            { text: "D", isCorrect: false }
+        ]
+  
+    },
+	{
+		id: 9,
+        q: "Which of these flags is the national flag of the USA?",
+		
+        a: [{ text: "A", isCorrect: true },
+            { text: "B", isCorrect: false },
+            { text: "C", isCorrect: false },
+            { text: "D", isCorrect: false }
         ]
   
     }
@@ -177,10 +180,10 @@ function iterate(id) {
         selected = op4.value;
     })
   
-    // Grabbing the check answer button
-    const check_answer = document.getElementsByClassName("Check Answer");
+    // Grabbing the check_answer button
+    const check_answer = document.getElementsByClassName("check_answer");
   
-    // check method
+    // check_answer method
     check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
             result[0].innerHTML = "True";
@@ -195,17 +198,3 @@ function iterate(id) {
 if (start) {
     iterate("0");
 }
-  
-// Next button and method
-const next = document.getElementsByClassName('next')[0];
-var id = 0;
-  
-next.addEventListener("click", () => {
-    start = false;
-    if (id < 2) {
-        id++;
-        iterate(id);
-        console.log(id);
-    }
-  
-})

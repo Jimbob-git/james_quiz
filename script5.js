@@ -9,26 +9,6 @@ const Questions = [{
             { text: "D", isCorrect: false }
         ]
   
-    },
-    {
-        id: 1,
-        q: "What is the capital of Thailand?",
-        a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-            { text: "phuket", isCorrect: false },
-            { text: "Ayutthaya", isCorrect: false },
-            { text: "Bangkok", isCorrect: true }
-        ]
-  
-    },
-    {
-        id: 2,
-        q: "What is the capital of Gujarat",
-        a: [{ text: "surat", isCorrect: false },
-            { text: "vadodara", isCorrect: false },
-            { text: "gandhinagar", isCorrect: true },
-            { text: "rajkot", isCorrect: false }
-        ]
-  
     }
   
 ]
@@ -108,10 +88,10 @@ function iterate(id) {
     })
   
     // Grabbing the evaluate button
-    const evaluate = document.getElementsByClassName("evaluate");
+    const check_answer = document.getElementsByClassName("check_answer");
   
     // Evaluate method
-    evaluate[0].addEventListener("click", () => {
+    check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
             result[0].innerHTML = "True";
             result[0].style.color = "green";
@@ -125,17 +105,4 @@ function iterate(id) {
 if (start) {
     iterate("0");
 }
-  
-// Next button and method
-const next = document.getElementsByClassName('next')[0];
-var id = 0;
-  
-next.addEventListener("click", () => {
-    start = false;
-    if (id < 2) {
-        id++;
-        iterate(id);
-        console.log(id);
-    }
-  
-})
+ 
