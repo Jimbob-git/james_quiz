@@ -46,29 +46,25 @@ button:hover {
   padding: 16px;
 }
 
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  
 }
 
 @media only screen and (max-width:800px) {
   /* For tablets: */
+  .nav {
+	width: 20%;
+	padding: 0;
+  }
   .main {
-    width: 80%;
+    width: 60%;
     padding: 0;
   }
-  .right {
-    width: 100%;
+  .aside {
+    width: 20%;
   }
 }
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
-  .menu, .main, .right {
+  .nav, .main, .aside {
     width: 100%;
   }
 }
