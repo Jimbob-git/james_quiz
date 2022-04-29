@@ -198,3 +198,17 @@ function iterate(id) {
 if (start) {
     iterate("0");
 }
+
+// Next button and method
+const next = document.getElementsByClassName('next')[0];
+var id = 0;
+  
+next.addEventListener("click", () => {
+    start = false;
+    if (id < 2) {
+        id++;
+        iterate(id);
+        console.log(id);
+    }
+  
+})

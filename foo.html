@@ -1,0 +1,88 @@
+<html>
+<body>
+  
+  <!-- Vue works with this div -->
+  <div id="app">
+    <!-- Vue's data.title displayed here -->
+    <h1>{{ title }}</h1>
+  </div>
+  
+  <!-- Load Vue script -->
+  <script src="https://vuejs.org/js/vue.js"></script>
+  <!-- On load, init Vue -->
+  <script>
+    window.onload=function(){
+
+      new Vue({
+        el: '#app', // Vue works with this div (see line 4)
+        data: { title: 'Hello.' }, // title is set to 'Hello.'
+      });
+
+    }
+	 <script>
+    window.onload=function(){
+      
+      // Create a quiz object with a title and two questions.
+      // A question has one or more answer, and one or more is valid.
+      var quiz = {
+        title: 'My quiz',
+        questions: [
+          {
+            text: "Question 1",
+            responses: [
+              {text: 'Wrong, too bad.'}, 
+              {text: 'Right!', correct: true}, 
+            ]
+          }, {
+            text: "Question 2",
+            responses: [
+              {text: 'Right answer', correct: true}, 
+              {text: 'Wrong answer'}, 
+            ]
+          } 
+        ]
+      };
+      
+      new Vue({
+        el: '#app',
+        data: { quiz: quiz }, // Attach quiz to Vue data
+      });
+    }
+  </script>
+  <div id="app">
+  <!-- Quiz title -->
+  <h1>{{ quiz.title }}</h1>
+  <!-- Questions: display a div for each question -->
+  <div v-for="question in quiz.questions">
+    <h2>{{ question.text }}</h2>
+    <!-- Responses: display a li for each possible response with a radio button -->
+    <ol>
+      <li v-for="response in question.responses">
+        <label>
+          <input type="radio"> {{response.text}}
+        </label>
+      </li>
+    </ol>
+  </div>
+</div>
+new Vue({
+  el: '#app',
+  data: {
+    quiz: quiz,
+    // Store current question index
+    questionIndex: 0,
+  },
+  // The view will trigger these methods on click
+  methods: {
+    // Go to next question
+    next: function() {
+      this.questionIndex++;
+    },
+    // Go to previous question
+    prev: function() {
+      this.questionIndex--;
+    }
+  }
+});
+
+</body>
