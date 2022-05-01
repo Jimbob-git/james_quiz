@@ -20,9 +20,6 @@ window.onload = function(){
 	document.getElementById('user').value = uname;
 
 
-
-
-
 // Questions will be asked
 
 const questions = [
@@ -254,7 +251,7 @@ if (start) {
 }
   
 // Next button and method
-const next = document.getElementsByClassName('next')[0];
+const next question = document.getElementsByClassName('next question')[0];
 var id = 0;
   
 next.addEventListener("click", () => {
