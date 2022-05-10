@@ -1,18 +1,18 @@
 // Questions will be asked
 const Questions = [{
-        id: 0,
-        q: "Which of these flags is the national flag of Scotland?",
+        id: 7,
+        q: "Q8. Melbourne is home to the Australian Formula One Grand Prix and what other international sporting event",
 		
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: true },
-            { text: "D", isCorrect: false }
+        a: [{ text: "The Australian Open", isCorrect: true },
+            { text: "The Oceania Rugby Tournament", isCorrect: false },
+            { text: "The Australian Rules Football Final", isCorrect: false },
+            { text: "South Australia Kangaroo Race", isCorrect: false }
         ]
   
     }
   
 ]
-  
+ 
 // Set start
 var start = true;
   
@@ -93,10 +93,11 @@ function iterate(id) {
     // check answer method
     check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
-            result[0].innerHTML = "True";
-            result[0].style.color = "green";
+            result[0].innerHTML = "Correct, Well Done!";
+            result[0].style.color = "#FF1493";
+			
         } else {
-            result[0].innerHTML = "False";
+            result[0].innerHTML = "Incorrect, Try Again";
             result[0].style.color = "red";
         }
     })

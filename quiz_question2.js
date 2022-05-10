@@ -1,18 +1,18 @@
 // Questions will be asked
 const Questions = [{
-        id: 0,
-        q: "Which of these flags is the national flag of Scotland?",
+        id: 1,
+        q: "Q2. London has six major airports, 5 of which are: Gatwick, Heathrow, Luton, Southend and Stanstead, name the sixth one?",
 		
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: true },
-            { text: "D", isCorrect: false }
+        a: [{ text: "London Palace", isCorrect: false },
+            { text: "London House", isCorrect: false },
+            { text: "London North Castle", isCorrect: false },
+            { text: "London City", isCorrect: true }
         ]
   
     }
   
 ]
-  
+ 
 // Set start
 var start = true;
   
@@ -93,10 +93,11 @@ function iterate(id) {
     // check answer method
     check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
-            result[0].innerHTML = "True";
-            result[0].style.color = "green";
+            result[0].innerHTML = "Correct, Well Done!";
+            result[0].style.color = "#FF1493";
+			
         } else {
-            result[0].innerHTML = "False";
+            result[0].innerHTML = "Incorrect, Try Again";
             result[0].style.color = "red";
         }
     })

@@ -18,14 +18,23 @@
 	<input type="button" onclick="createCookie()" value="submit">
 	
     </label>
-	<a href="quiz_question1.html"><button class="button">Start Main Quiz</button></a>
-	<a href="leaderboard.html"><button class="button">Leaderboard</button></a>
+	 
+	<audio id="sound1" src="sound1.wav" autostart="false" ></audio>
+			<!--<a onclick="PlaySound()"> Play</a> -->
+			<script>
+				function PlaySound() {
+				var sound = document.getElementById("sound1");
+				sound.play();
+				setTimeout(function(){ location.href = 'quiz_question1.html'; }, sound.duration * 1000);
+			}
+			</script>
+    		<button type="button" button class="button" onclick="PlaySound();">Start Main Quiz</button>
+	
+			<a href="leaderboard.html"><button class="button">Leaderboard</button></a>
   </div>
-</form>
+  <img src="map1.jpeg" alt="World" style="width:100%">
+ </main>
  
- <img src="map1.jpeg" alt="World" style="width:100%">
- 
-  </main>
  <nav>
  <p>
  <div class="w3-sidebar w3-blue w3-bar-block" style="width:20%">

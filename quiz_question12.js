@@ -1,18 +1,18 @@
 // Questions will be asked
 const Questions = [{
-        id: 0,
-        q: "Which of these flags is the national flag of Scotland?",
+        id: 11,
+        q: "Q12. The Hollywood sign in Los Angeles was originally built in 1923, however it had a longer name and was changed to Hollywood in 1949, what was the original name",
 		
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: true },
-            { text: "D", isCorrect: false }
+        a: [{ text: "Hollywood Town", isCorrect: false },
+            { text: "Movie Town", isCorrect: false },
+            { text: "HollywoodMovieLand", isCorrect: false },
+            { text: "HolywoodLand", isCorrect: true }
         ]
   
     }
   
 ]
-  
+ 
 // Set start
 var start = true;
   
@@ -93,10 +93,11 @@ function iterate(id) {
     // check answer method
     check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
-            result[0].innerHTML = "True";
-            result[0].style.color = "green";
+            result[0].innerHTML = "Correct, Well Done!";
+            result[0].style.color = "#FF1493";
+			
         } else {
-            result[0].innerHTML = "False";
+            result[0].innerHTML = "Incorrect, Try Again";
             result[0].style.color = "red";
         }
     })

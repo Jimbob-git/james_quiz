@@ -1,18 +1,18 @@
 // Questions will be asked
 const Questions = [{
-        id: 0,
-        q: "Which of these flags is the national flag of Scotland?",
+        id: 9,
+        q: "Q10. Fiji sits in which Ocean",
 		
-        a: [{ text: "A", isCorrect: false },
-            { text: "B", isCorrect: false },
-            { text: "C", isCorrect: true },
-            { text: "D", isCorrect: false }
+        a: [{ text: "Atlantic Ocean", isCorrect: false },
+            { text: "South Pacific Ocean", isCorrect: true },
+            { text: "Indian Ocean", isCorrect: false },
+            { text: "Artic Ocean", isCorrect: false }
         ]
   
     }
   
 ]
-  
+ 
 // Set start
 var start = true;
   
@@ -93,10 +93,11 @@ function iterate(id) {
     // check answer method
     check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
-            result[0].innerHTML = "True";
-            result[0].style.color = "green";
+            result[0].innerHTML = "Correct, Well Done!";
+            result[0].style.color = "#FF1493";
+			
         } else {
-            result[0].innerHTML = "False";
+            result[0].innerHTML = "Incorrect, Try Again";
             result[0].style.color = "red";
         }
     })

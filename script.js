@@ -1,3 +1,15 @@
+const question = document.querySelector('#question');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
+const progressText = document.querySelector('#progressText');
+const scoreText = document.querySelector('#score');
+const progressBarFull = document.querySelector('progressBarFull');
+
+let currentQuestion = {}
+let acceptingAnswers = true
+let score = 0
+let questionCounter = 0
+let availableQuestions = []
+
 function createCookie(name,pwds){
   let username = document.getElementById("user");
   let pwd = document.getElementById("pd");
@@ -11,40 +23,34 @@ function createCookie(name,pwds){
   document.cookie = "name="+username.value+";path=/" + ";expires="+expire.toUTCString();
   //can only write one entity at a time (name, pass)
 }  
-
-
 //event handler for page load - runs on every refresh
 window.onload = function(){
 	
 	var uname = 'Route66';
 	document.getElementById('user').value = uname;
 
-
 // Questions will be asked
-
-const questions = [
+let questions = [
     
     {
-        id: 0,
-	q: "Q1. What is the name of the Queen's official Edinburgh residence?",
-        a: [{ text: "Holyrood House", isCorrect: false },
-            { text: "Holyrood Castle", isCorrect: false },
-            { text: "Holyrood Palace", isCorrect: true },
-            { text: "Edinburgh Castle", isCorrect: false }
-        ]
-  
-    },	
+    question: "Q1. What is the name of the Queen's official Edinburgh residence?",
+    choice1: "Holyrood House", 
+    choice2: "Holyrood Castle",
+    choice3: "Holyrood Palace", 
+    choice4: "Edinburgh Castle",
+	answer: 3
+	},	
+	
 	{
-        id: 1,
-        q: "Q2. London has six major airports, 5 of which are: Gatwick, Heathrow, Luton, Southend and Stanstead, name the sixth one?",
-        a: [{ text: "London Palace", isCorrect: false },
-            { text: "London House", isCorrect: false },
-            { text: "London North Castle", isCorrect: false },
-            { text: "London City", isCorrect: true }
-        ]
-  
-    },
-    {
+    question: "Q2. London has six major airports, 5 of which are: Gatwick, Heathrow, Luton, Southend and Stanstead, name the sixth one?",
+    choice1: "London Palace",
+    choice2: "London House",
+    choice3: "London North Castle", 
+    choice4: "London City",
+	answer: 4
+	},
+    
+	{
         id: 2,
         q: "Q3. What is the name of the worlds biggest movie industry?",
         a: [{ text: "Hollywood", isCorrect: false },
@@ -157,6 +163,77 @@ const questions = [
   
 ]
   
+  
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 10 score
+
+startGame = () -> {
+	questionCounter = 0
+	score = 0
+	availableQuestions = [...questions]
+	getNewQuestion()
+}
+
+getNewQuestion = () => {
+if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+	localStorage.setItem('mostRecentScore',) 
+
+	return window.location.assign('/end.html')
+}
+
+questionCounter++
+progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
+progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
+
+const questionIndex = Math.floor(Math.random() * availableQuestions.length)
+currentQuestion = availableQuestions[questionsIndex]
+question.innerText = currentQuestion.question
+
+choices.forEach(choice => {
+	const number = choice.dataset['number']
+	choice.innerText = currentQuestion['choice' + number]
+})
+
+availableQuestions.splice(questionsIndex, 1)
+
+acceptingAnswers = true
+}
+
+choices.forEach(choice => {
+	choice.addEventListener('click', e => {
+		if(!acceptingAnswers) return
+		
+		acceptingAnswers = false
+		const selectedChoice = e.target
+		const selectedAnswer = selectedChoice.dataset['number']
+		
+		let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+		
+		if(classToApply === 'correct') {
+			incrementScore(SCORE_POINTS)
+		}
+		
+		selectedChoice.parentElement.classList.add(classToApply)
+		
+		setTimeout(() => {
+			selectedChoice.parentElement.classList.remove(classToApply)
+			getNewQuestion()
+			
+		}, 1000)
+	})
+
+incrementScore = num => {
+	score +=num
+	scoreText.innerText = score
+}
+
+startGame()
+
+
+
+
+
+
 // Set start
 var start = true;
   
