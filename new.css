@@ -127,6 +127,14 @@ header {
  grid-row: 1;
  grid-column: 1 / 4;
 }
+h1 {
+  text-shadow: 1px 1px 1px blue,
+               2px 2px 1px blue;
+}
+h2 {
+  text-shadow: 1px 1px 1px red,
+               2px 2px 1px black;
+}
 nav {
  grid-row: 2;
  grid-column: 1 / 2;
