@@ -56,21 +56,19 @@
 	
 	
 	<script src="quiz_question1.js"></script>
+	
+	<div id="result"></div>
+
+	<script>
+	// Store
+	localStorage.setItem("id", "3");
+	}
+	</script>
 </body>
 <footer>
 	<div class="navigation">
-			<audio id="sound1" src="sound1.wav" autostart="false" ></audio>
-			<!--<a onclick="PlaySound()"> Play</a> -->
-			<script>
-				function PlaySound() {
-				var sound = document.getElementById("sound1");
-				sound.play();
-				setTimeout(function(){ location.href = 'home_page.html'; }, sound.duration * 1000);
-			}
-			</script>
-    		<button type="button3" button class="button3" onclick="PlaySound();">Home</button>
-			
-			<a href="quiz_question2.html"><button class="button4">Next Question</button>
+		<a href="home_page.html"><button class="button3">Home</button>
+		<a href="quiz_question2.html"><button class="button4">Next Question</button>
 	</div>
 </footer>
 </html>

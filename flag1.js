@@ -93,10 +93,10 @@ function iterate(id) {
     // check answer method
     check_answer[0].addEventListener("click", () => {
         if (selected == "true") {
-            result[0].innerHTML = "True";
+            result[0].innerHTML = "Correct, Well Done";
             result[0].style.color = "green";
         } else {
-            result[0].innerHTML = "False";
+            result[0].innerHTML = "Incorrect, Try Again";
             result[0].style.color = "red";
         }
     })
