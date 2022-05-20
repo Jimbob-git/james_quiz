@@ -76,7 +76,7 @@ button:hover {
   cursor: pointer;
   outline: none;
   color: #000000;
-  background-color: #04AA6D;
+  background-color: red;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
